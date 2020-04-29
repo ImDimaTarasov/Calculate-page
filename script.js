@@ -71,19 +71,20 @@ let appData ={
         }
     },
     chooseIncome: function(){
-        for (let j=0; j < 1; j++){
+        
         let items = prompt('Что принесет дополнительный доход? (Перечислить через запятую)', '');
-        if((typeof(items)) ==='string' && items !='' && (typeof(items))!= null) {
-            appData.income = items.split(', ');
+        
+        if((typeof(items)) != 'string' || items =='' || (typeof(items)) == null) {
+            console.log("Данные введены не верно");
+            
         }else {
-            j--;
-        }
+            appData.income = items.split(', ');
             appData.income.push(prompt('Может что-то еще?'));
             appData.income.sort();
-            
+
         }
         appData.income.forEach(function(item,i){
-            alert((i+1) + "." + item);
+            alert("Способы доп. заработка: " + (i+1) + "." + item);
         });
     }
 };
