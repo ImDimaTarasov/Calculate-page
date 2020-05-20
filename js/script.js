@@ -1,6 +1,32 @@
 "use strict";
 
 let money,time;
+let startBtn = document.getElementById('start'),
+
+    budgetValue = document.getElementsByClassName('budget-value'),
+    daybudgetValue = document.getElementsByClassName('budget-value'),
+    levelValue = document.getElementsByClassName('budget-value'),
+    expensesValue = document.getElementsByClassName('budget-value'),
+    optionalExpensesValue = document.getElementsByClassName('budget-value'),
+    incomeValue = document.getElementsByClassName('budget-value'),
+    monthsavingsValue = document.getElementsByClassName('budget-value'),
+    yearsavingsValue = document.getElementsByClassName('budget-value'),
+    expensesItem = document.getElementsByClassName('expenses-item'),
+    btnExpensesItem = document.getElementsByTagName('button')[0],
+    btnOptionalExpenses = document.getElementsByTagName('button')[1],
+    btnCountBudget = document.getElementsByTagName('button')[2],
+    optionalExpensesItem = document.querySelectorAll('.optionalexpenses-item'),
+    chooseIncome = document.querySelector('.choose-income'),
+    checksavings = document.querySelector('#savings'),
+    sumChoose = document.querySelector('.choose-sum'),
+    percentChoose = document.querySelector('.choose-percent'),
+    yearValue = document.querySelector('.year-value'),
+    monthValue = document.querySelector('.month-value'),
+    dayValue = document.querySelector('.day-value');
+
+
+console.log(yearValue);
+
 
 // Получаем информацию о бюджете и дате
 function start(){
@@ -11,7 +37,7 @@ function start(){
         money = +prompt('Ваш бюджет на месяц?',"");
     }
 }
-start();
+// start();
 let appData ={
     budget: money,
     timeData: time,
@@ -110,7 +136,7 @@ function sumExpenses(opCost){
     return sum;
 }
 
-console.log(appData);
+
 
 
 // checkSavings();
