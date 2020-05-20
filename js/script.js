@@ -3,14 +3,15 @@
 let money,time;
 let startBtn = document.getElementById('start'),
 
-    budgetValue = document.getElementsByClassName('budget-value'),
-    daybudgetValue = document.getElementsByClassName('budget-value'),
-    levelValue = document.getElementsByClassName('budget-value'),
-    expensesValue = document.getElementsByClassName('budget-value'),
-    optionalExpensesValue = document.getElementsByClassName('budget-value'),
-    incomeValue = document.getElementsByClassName('budget-value'),
-    monthsavingsValue = document.getElementsByClassName('budget-value'),
-    yearsavingsValue = document.getElementsByClassName('budget-value'),
+    budgetValue = document.getElementsByClassName('budget-value')[0],
+    daybudgetValue = document.getElementsByClassName('daybudget-value')[0],
+    levelValue = document.getElementsByClassName('level-value')[0],
+    expensesValue = document.getElementsByClassName('expenses-value')[0],
+    optionalExpensesValue = document.getElementsByClassName('optionalexpenses-value')[0],
+    incomeValue = document.getElementsByClassName('income-value')[0],
+    monthsavingsValue = document.getElementsByClassName('monthsavings-value')[0],
+    yearsavingsValue = document.getElementsByClassName('yearsavings-value')[0],
+
     expensesItem = document.getElementsByClassName('expenses-item'),
     btnExpensesItem = document.getElementsByTagName('button')[0],
     btnOptionalExpenses = document.getElementsByTagName('button')[1],
@@ -25,7 +26,7 @@ let startBtn = document.getElementById('start'),
     dayValue = document.querySelector('.day-value');
 
 
-console.log(yearValue);
+console.log(yearsavingsValue,monthsavingsValue,incomeValue);
 
 
 // Получаем информацию о бюджете и дате
